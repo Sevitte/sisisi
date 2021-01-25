@@ -29,9 +29,8 @@ namespace OdeToFood.Data.Services
 
         public IEnumerable<Restaurant> GetAll()
         {
-            return from o in db.Owners
-                   join r in db.Restaurants on o.Id equals r.OwnerId
-                   where o.Id == r.OwnerId
+            return from r in db.Restaurants
+                   join o in db.Owners on r.OwnerId equals o.Id
                    orderby r.Name
                    select r;
         }

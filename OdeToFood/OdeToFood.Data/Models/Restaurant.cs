@@ -11,12 +11,13 @@ namespace OdeToFood.Data.Models
 {
     public class Restaurant : IValidatableObject
     {
-        
+        [Key]
         public int Id { get; set; }
 
-        [Key]
         [ForeignKey("Owner")]
         public int OwnerId { get; set; }
+
+        public Owner Owner { get; set; }
         
         [Required]
         [MaxLength(255)]
