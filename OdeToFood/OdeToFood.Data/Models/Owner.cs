@@ -9,6 +9,7 @@ namespace OdeToFood.Data.Models
 {
     public class Owner
     {
+        [Key]
         public int Id { get; set; }
         [Required]
         [MaxLength(50)]
