@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+@using OdeToFood.CustomTag
+
+<h2>This is my favourite coffee place</h2>
+<br>
+<div>
+    @Html.Raw(CustomTag.img("/Images/coffee.jpg", "coffee", "coffee"))
+</div>
+<p>
+    @Html.Raw(CustomLabel.Create("This is Black and White Coffee"))
+</p>
+
